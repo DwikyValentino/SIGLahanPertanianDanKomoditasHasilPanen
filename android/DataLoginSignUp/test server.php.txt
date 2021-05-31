@@ -1,0 +1,9 @@
+1. localhost/SIGPertanianAndroid/server.php?operasi=view
+
+2. http://localhost/SIGPertanianAndroid/server.php?operasi=insert&namakomoditas=Beras&jumlah=170&bulan=Agustus&tahun=2018&desa=Klampok&kecamatan=Wanasari
+
+3. http://localhost/SIGPertanianAndroid/server.php?operasi=get_komoditas_by_id&id=1
+
+4. http://localhost/SIGPertanianAndroid/server.php?operasi=insert&namakomoditas=BerasPutih&jumlah=170&bulan=Agustus&tahun=2018&desa=Klampok&kecamatan=Wanasari&id=4
+
+5. http://localhost/SIGPertanianAndroid/server.php?operasi=delete&id=4
