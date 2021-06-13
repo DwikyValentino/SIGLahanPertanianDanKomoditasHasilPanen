@@ -27,7 +27,7 @@ class User_m extends CI_Model {
     {
         $params['fullname'] = $post['fullname'];
         $params['username'] = $post['username'];
-        $params['password'] = sha1($post['password']);
+        $params['password'] = sha1($post['password']); 
         $params['alamat'] = $post['alamat'];
         $params['email'] = $post['email'];
         $params['phone'] = $post['phone'];

@@ -170,7 +170,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="<?=site_url('validasilahan')?>">
             <i class="fa fa-th"></i> <span>Validasi Lahan Pertanian</span>
             <span class="pull-right-container">
               <!-- <small class="label pull-right bg-green">New</small> -->
@@ -178,7 +178,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="<?=site_url('validasikomoditas')?>">
             <i class="fa fa-th"></i> <span>Validasi Komoditas Hasil Panen</span>
             <span class="pull-right-container">
               <!-- <small class="label pull-right bg-green">New</small> -->

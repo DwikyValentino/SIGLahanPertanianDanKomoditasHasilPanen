@@ -27,7 +27,7 @@ class Petugas_m extends CI_Model {
     {
         $params['fullname'] = $post['fullname'];
         $params['username'] = $post['username'];
-        $params['password'] = $post['password'];
+        $params['password'] = sha1($post['password']); 
         $params['email'] = $post['email'];
         $this->db->insert('users', $params);
     }
@@ -37,7 +37,7 @@ class Petugas_m extends CI_Model {
         $params['fullname'] = $post['fullname'];
         $params['username'] = $post['username'];
         if(!empty($post['password'])) {
-            $params['password'] = $post['password'];
+            $params['password'] = sha1($post['password']);
         }
         $params['email'] = $post['email'];
         $this->db->where('id', $post['id']);
