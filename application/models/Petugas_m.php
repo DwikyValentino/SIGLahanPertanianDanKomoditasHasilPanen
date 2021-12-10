@@ -2,16 +2,6 @@
 
 class Petugas_m extends CI_Model {
 
-    public function login($post)
-    {
-        $this->db->select('*');
-        $this->db->from('users');
-        $this->db->where('username', $post['username']);
-        $this->db->where('password', sha1($post['password']));
-        $query = $this->db->get();
-        return $query;
-    }
-
     public function get($id = null)
     {
         $this->db->select('*');
@@ -27,7 +17,7 @@ class Petugas_m extends CI_Model {
     {
         $params['fullname'] = $post['fullname'];
         $params['username'] = $post['username'];
-        $params['password'] = sha1($post['password']); 
+        $params['password'] = md5($post['password']); 
         $params['email'] = $post['email'];
         $this->db->insert('users', $params);
     }
@@ -37,7 +27,7 @@ class Petugas_m extends CI_Model {
         $params['fullname'] = $post['fullname'];
         $params['username'] = $post['username'];
         if(!empty($post['password'])) {
-            $params['password'] = sha1($post['password']);
+            $params['password'] = md5($post['password']);
         }
         $params['email'] = $post['email'];
         $this->db->where('id', $post['id']);

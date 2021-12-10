@@ -26,6 +26,14 @@
                 <thead>
                     <tr>
                         <th>#</th>
+                        <th>Nama Pemilik</th>
+                        <th>Luas</th>
+                        <th>Meter</th>
+                        <th>Desa</th>
+                        <th>Kecamatan</th>
+                        <th>Latitude</th>
+                        <th>Longtitude</th>
+                        <th>Foto</th>
                         <th>Action</th>
                     <tr>
                 </thead>
@@ -34,9 +42,17 @@
                     foreach($row->result() as $key => $data) { ?>
                     <tr>
                         <td><?=$no++?>.</td>
+                        <td><?=$data->namapemilik?></td>
+                        <td><?=$data->luas?></td>
+                        <td><?=$data->meter?></td>
+                        <td><?=$data->desa?></td>
+                        <td><?=$data->kecamatan?></td>
+                        <td><?=$data->latitude?></td>
+                        <td><?=$data->longtitude?></td>
+                        <td><?=$data->foto?></td>
                         <td class="text-center" width="160px">
                             <form action="<?=site_url('validasilahan/delete')?>" method="post">
-                                <input type="hidden" name="id_komoditas" value="<?=$data->id_komoditas?>">
+                                <input type="hidden" name="id_lahan" value="<?=$data->id_lahan?>">
                                     <button onclick="return confirm('Apakah Anda yakin ingin menghapus Data ini?')" class="btn btn-danger btn-xs">
                                         <i class="fa fa-trash"></i> Hapus
                                     </button>

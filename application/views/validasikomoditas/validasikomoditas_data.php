@@ -26,6 +26,12 @@
                 <thead>
                     <tr>
                         <th>#</th>
+                        <th>Nama Komoditas</th>
+                        <th>Jumlah</th>
+                        <th>Dari Tanggal</th>
+                        <th>Sampai Tanggal</th>
+                        <th>Desa</th>
+                        <th>Kecamatan</th>
                         <th>Action</th>
                     <tr>
                 </thead>
@@ -34,6 +40,12 @@
                     foreach($row->result() as $key => $data) { ?>
                     <tr>
                         <td><?=$no++?>.</td>
+                        <td><?=$data->namakomoditas?></td>
+                        <td><?=$data->jumlah?></td>
+                        <td><?=$data->awal?></td>
+                        <td><?=$data->akhir?></td>
+                        <td><?=$data->desa?></td>
+                        <td><?=$data->kecamatan?></td>
                         <td class="text-center" width="160px">
                             <form action="<?=site_url('validasikomoditas/delete')?>" method="post">
                                 <input type="hidden" name="id_komoditas" value="<?=$data->id_komoditas?>">

@@ -17,7 +17,7 @@ class Validasilahan extends CI_Controller {
 	
 	public function delete()
     {
-        $id = $this->input->post('id_komoditas');
+        $id = $this->input->post('id_lahan');
         $this->validasilahan_m->delete($id);
 
         if($this->db->affected_rows() > 0) {

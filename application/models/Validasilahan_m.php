@@ -7,7 +7,7 @@ class Validasilahan_m extends CI_Model {
         $this->db->select('*');
         $this->db->from('tb_lahanpertanian');
         if($id != null) {
-            $this->db->where('id_komoditas', $id);
+            $this->db->where('id_lahan', $id);
         }
         $query = $this->db->get();
         return $query;
@@ -16,8 +16,8 @@ class Validasilahan_m extends CI_Model {
 
     public function delete($id)
 	{
-        $this->db->where('id_komoditas', $id);
-        $this->db->delete('tb_komoditas');
+        $this->db->where('id_lahan', $id);
+        $this->db->delete('tb_lahanpertanian');
     }
 
     // public function accept($id)
